@@ -15,13 +15,17 @@
 
         <h2>CLCIK ON THE CRAPPY BUTTON TO MAKE IT WORK</h2>
         <br>
-        <button style="color: rgb(255, 255, 255);" v-on:click="getPosts">CLICK HERE</button>
+        <button style="color: rgb(255, 255, 255);" v-on:click="getComents">CLICK HERE</button>
+        <button style="background:rgb(192, 1, 1); color:rgb(255, 255, 255);"  v-on:click="coments = []">RESTART</button>
+        <button style="background:rgb(0, 40, 170); color:rgb(255, 255, 255);"  v-on:click="getComents">GET THE COMENTS</button>
         <br>
         <br>
-        <h3>There are {{posts.length}} entries in this page</h3>
+        <h3>There are {{coments.length}} coments in this page</h3>
         <ol>
-            <li v-for="post in posts" v-text="post.title"></li>
+            <li v-for="coment in coments" v-text="coment.name"></li>
         </ol>
+        <br>
+        <br>
 
     </div>    
     <script src="app.js"></script>

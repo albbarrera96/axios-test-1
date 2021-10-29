@@ -2,13 +2,13 @@ new Vue ({
   el: '#vue-app',
 
 data: {
-  posts: []
+  coments: []
 },
 
 methods: {
-    getPosts (){
-      axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(response => this.posts = response.data)
+    getComents (){
+      axios.get('https://jsonplaceholder.typicode.com/comments')
+      .then(response => this.coments = response.data)
     }
 
 }
